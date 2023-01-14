@@ -1,5 +1,8 @@
 {% extends 'base/base.html' %}
+{% load placeholders %}
 {% block page_content %}
+
+
     <!-- Start Register Section -->
     <div class="login-register-div">
         <div class="login-register-box">
@@ -7,10 +10,10 @@
 
             <!-- Start Register Form -->
             <form method="post" action="{% url 'register user' %}">
-                {{ form.username|palceholder:"Username" }}
-                {{ form.email|palceholder:"Username" }}
-                {{ form.password|palceholder:"Username" }}
-                {{ form.password2|palceholder:"Username" }}
+                {{ form.username|placeholder:"Username" }}
+                {{ form.email|placeholder:"email" }}
+                {{ form.password1|placeholder:"password" }}
+                {{ form.password2|placeholder:"Confirm password" }}
                 {% csrf_token %}
                 <!-- Register Button -->
                 <button type="submit">Register</button>

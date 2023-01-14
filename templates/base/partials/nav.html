@@ -32,7 +32,7 @@
                 {% if request.user.is_authenticated %}
                     <li class="nav-item">
                         <!-- Link to Profile Page -->
-                        <a href="{% url 'details user' %}">
+                        <a href="{% url 'details user' pk=request.user.pk%}">
                             <i>Profile</i>
                         </a>
                     </li>

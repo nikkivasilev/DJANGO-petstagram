@@ -24,7 +24,6 @@ def index(request):
 
     photos = [apply_likes_count(photo) for photo in photos]
     photos = [apply_user_liked_photo(photo) for photo in photos]
-    print(photos)
     context = {
         'photos': photos,
         'comment_form': PhotoCommentForm(),

@@ -7,6 +7,6 @@ UserModel = get_user_model()
 class UserCreateForm(UserCreationForm):
     class Meta:
         model = UserModel
-        fields = ('username', 'email')
+        fields = ('username', 'email', 'password1', 'password2')
         field_classes = {
             'username': UsernameField, }
